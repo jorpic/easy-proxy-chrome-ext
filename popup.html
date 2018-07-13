@@ -1,9 +1,26 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <style>
+      select, button, textarea {
+        margin: 5px;
+        padding: 3px;
+        font-size: medium;
+      }
+      textarea { font-size: large; }
+    </style>
+  </head>
   <body>
-    <strong id="mode"></strong>
-    <textarea id="config" rows=30 cols=60></textarea>
+    <select id="mode">
+      <option>pac_script</option>
+      <option>system</option>
+      <option>direct</option>
+      <option>auto_detect</option>
+      <option disabled>fixed_servers</option>
+    </select>
+    <textarea id="config" rows=20 cols=50></textarea>
     <button id="save">Save config</button>
+    <button id="cancel">Cancel</button>
     <script src="popup.js"></script>
   </body>
 </html>
